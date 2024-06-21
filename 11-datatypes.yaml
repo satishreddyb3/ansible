@@ -22,6 +22,6 @@
   - name: print map
     ansible.builtin.debug:
       msg: "EXPERIENCE: {{EXPERIENCE}}"
- - name: print boolean
+  - name: print boolean
     ansible.builtin.debug:
       msg: "Trainer: {{Trainer}}"    
