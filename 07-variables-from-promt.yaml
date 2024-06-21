@@ -1,0 +1,13 @@
+- name: variables from prompt
+  hosts: localhost
+  vars_prompt:
+  - name: USERNAME
+    prompt: please enter user name
+    private: false
+  - name: PASSWORD
+    prompt: please enter user password
+    private: TRUE 
+  tasks:
+  - name: check variables
+    ansible.builtin.debug:
+      msg: "Hi, I am Learning :{{USERNAME}}, Trainer is :{{PASSWORD}}, Duration is : {{USERNAME:PASSWORD}}"
